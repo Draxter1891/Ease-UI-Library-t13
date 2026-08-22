@@ -29,11 +29,12 @@ const inputVariants = cva(
       tone: "default",
       disabled: false,
     },
-  }
+  },
 );
 
 export interface InputProps
-  extends React.InputHTMLAttributes<HTMLInputElement>,
+  extends
+    Omit<React.InputHTMLAttributes<HTMLInputElement>, "size" | "disabled">,
     VariantProps<typeof inputVariants> {
   label?: string;
   hint?: string;
@@ -55,7 +56,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
       id,
       ...props
     },
-    ref
+    ref,
   ) => {
     const inputId =
       id ||
@@ -75,7 +76,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
           id={inputId}
           ref={ref}
           className={cn(inputVariants({ size, tone, disabled }), className)}
-          disabled={disabled}
+          disabled={disabled ?? false}
           {...props}
         />
         {error ? (
@@ -85,7 +86,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
         ) : null}
       </div>
     );
-  }
+  },
 );
 
 Input.displayName = "Input";

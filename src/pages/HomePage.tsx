@@ -1,7 +1,6 @@
 import { NavLink } from "react-router";
 import { useSelector } from "react-redux";
 import type { RootState } from "@/store/Store";
-import { LaptopMinimalCheck, PanelsTopLeft, Terminal } from "lucide-react";
 
 type Props = {};
 
@@ -9,13 +8,13 @@ const HomePage = ({}: Props) => {
   const { mode } = useSelector((state: RootState) => state.theme);
   const isDark = mode === "dark";
   const mutedText = isDark ? "text-[#c7c4d7]" : "text-gray-600";
-  const border = isDark ? "border-[#27272a]" : "border-gray-200";
-  const surface = isDark ? "bg-[#09090b]" : "bg-white";
+  const border = isDark ? "border-gray-800" : "border-gray-200";
+  const surface = isDark ? "bg-gray-900" : "bg-white";
 
   return (
     <div
-      className={`min-h-dvh antialiased pt-16 ${
-        isDark ? "bg-black text-[#e4e1e5]" : "bg-white text-gray-900"
+      className={`min-h-dvh pt-16 ${
+        isDark ? " text-[#e4e1e5]" : "text-gray-900"
       }`}
     >
       <main>
@@ -32,7 +31,7 @@ const HomePage = ({}: Props) => {
                 designed for the modern web. Built with Tailwind CSS and
                 TypeScript.
               </p>
-             
+
               <div className="flex flex-wrap gap-4">
                 <NavLink
                   to={"/components/buttons"}
@@ -87,99 +86,7 @@ const HomePage = ({}: Props) => {
             </div>
           </div>
         </section>
-
-        <section
-          className={`w-full border-t px-5 py-20 md:px-20 ${isDark ? "border-[#464554]/10" : "border-gray-200"}`}
-        >
-          <div className="grid grid-cols-1 gap-10 md:grid-cols-3">
-            <div className="flex flex-col items-start gap-4">
-              <div
-                className={`flex h-12 w-12 items-center justify-center rounded-lg border ${border} ${surface} text-[#c0c1ff]`}
-              >
-                <Terminal size={29} />
-              </div>
-              <h3 className="text-xl font-semibold"> TypeScript Ready </h3>
-              <p className={`leading-[1.6] ${mutedText}`}>
-                Built from the ground up with strict TypeScript support for
-                robust developer experience.
-              </p>
-            </div>
-            
-            <div className="flex flex-col items-start gap-4">
-              <div
-                className={`flex h-12 w-12 items-center justify-center rounded-lg border ${border} ${surface} text-[#4cd7f6]`}
-              >
-                <LaptopMinimalCheck size={24}/>
-              </div>
-              <h3 className="text-xl font-semibold"> Fully Accessible </h3>
-              <p className={`leading-[1.6] ${mutedText}`}>
-                Ready to use components ensuring your applications are
-                usable by everyone.
-              </p>
-            </div>
-            {/* Feature 3 */}
-            <div className="flex flex-col items-start gap-4">
-              <div
-                className={`flex h-12 w-12 items-center justify-center rounded-lg border ${border} ${surface} text-[#494bd6]`}
-              >
-                <PanelsTopLeft size={24}/>
-              </div>
-              <h3 className="text-xl font-semibold"> Utility First </h3>
-              <p className={`leading-[1.6] ${mutedText}`}>
-                Seamlessly integrates with Tailwind CSS allowing endless
-                customization without CSS bloat.
-              </p>
-            </div>
-          </div>
-        </section>
       </main>
-      {/* Footer */}
-      <footer
-        className={`mt-auto w-full border-t py-10 ${isDark ? "border-[#464554] bg-[#131316]" : "border-gray-200 bg-gray-50"}`}
-      >
-        <div className="mx-auto flex max-w-[1440px] flex-col items-center justify-between gap-8 px-5 md:flex-row md:gap-0 md:px-20">
-          <div
-            className={`text-xl font-bold ${isDark ? "text-[#e4e1e5]" : "text-gray-900"}`}
-          >
-            Ease UI{" "}
-          </div>
-          <div className="flex gap-6">
-            <a
-              href="#"
-              className={`transition-colors hover:text-[#c0c1ff] ${mutedText}`}
-            >
-              Github
-            </a>
-            <a
-              href="#"
-              className={`transition-colors hover:text-[#c0c1ff] ${mutedText}`}
-            >
-              Discord
-            </a>
-            <a
-              href="#"
-              className={`transition-colors hover:text-[#c0c1ff] ${mutedText}`}
-            >
-              Twitter
-            </a>
-            <a
-              href="#"
-              className={`transition-colors hover:text-[#c0c1ff] ${mutedText}`}
-            >
-              Terms
-            </a>
-            <a
-              href="#"
-              className={`transition-colors hover:text-[#c0c1ff] ${mutedText}`}
-            >
-              Privacy
-            </a>
-          </div>
-          <div className="text-[#4cd7f6]">
-            © 2024 Ease UI. Built for the modern web.
-          </div>
-        </div>
-      </footer>
     </div>
   );
 };

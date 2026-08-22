@@ -1,6 +1,4 @@
-type Props = {};
-
-const CarouselPage = (props: Props) => {
+const CarouselPage = () => {
   return <div>CarouselPage</div>;
 };
 

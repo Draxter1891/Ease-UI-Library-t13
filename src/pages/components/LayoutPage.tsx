@@ -1,6 +1,4 @@
-type Props = {};
-
-const LayoutPage = (props: Props) => {
+const LayoutPage = () => {
   return <div>LayoutPage</div>;
 };
 
