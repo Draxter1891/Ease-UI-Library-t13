@@ -28,7 +28,7 @@ const AppRouter = ({}: Props) => {
           element: <ComponentLayout />,
           children: [
             {
-              path: "button",
+              path: "buttons",
               element: <ButtonPage />,
             },
             {

@@ -40,7 +40,7 @@ const CodeBlock = ({ code, language = "tsx" }: CodeBlockProps) => {
         </button>
       </div>
       <pre
-        className={`border border-t-0 p-4 rounded-b-md overflow-x-auto ${
+        className={`custom-scrollbar border border-t-0 p-4 rounded-b-md overflow-x-auto ${
           isDark
             ? "border-gray-700 bg-gray-900"
             : "border-gray-200 bg-gray-50"

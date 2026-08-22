@@ -10,7 +10,7 @@ const ComponentLayout = ({}: Props) => {
   const location = useLocation();
   console.log(location);
   const navigate = useNavigate();
-  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(true);
   const { mode } = useSelector((state: RootState) => state.theme);
   const isDark = mode === "dark";
 
@@ -27,7 +27,7 @@ const ComponentLayout = ({}: Props) => {
 
   return (
     <div
-      className={`flex min-h-screen relative ${
+      className={`flex min-h-[calc(100vh-16vh)] relative ${
         isDark ? "bg-gray-950 text-gray-100" : "bg-white text-gray-900"
       }`}
     >
@@ -75,7 +75,7 @@ const ComponentLayout = ({}: Props) => {
         </aside>
       )}
 
-      <div className="flex-1 ml-10 overflow-auto h-screen p-6">
+      <div className="flex-1 ml-10 overflow-auto custom-scrollbar h-screen p-6">
         <button
           className={`${sidebarOpen ? "hidden" : "flex"} ${isDark ? "text-gray-200" : "text-gray-700"}`}
           onClick={() => setSidebarOpen(!sidebarOpen)}
