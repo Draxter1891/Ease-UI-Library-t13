@@ -10,6 +10,8 @@ import NavbarPage from "@/pages/components/NavbarPage";
 import ToolTip from "@/pages/components/ToolTipPage";
 import LayoutPage from "@/pages/components/LayoutPage";
 import CarouselPage from "@/pages/components/CarouselPage";
+import Templates from "@/pages/Templates";
+import About from "@/pages/components/About";
 
 type Props = {};
 
@@ -61,6 +63,14 @@ const AppRouter = ({}: Props) => {
             },
           ],
         },
+        {
+          path:"templates",
+          element:<Templates/>
+        },
+        {
+          path:"about",
+          element:<About/>
+        }
       ],
     },
   ]);

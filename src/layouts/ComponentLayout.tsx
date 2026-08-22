@@ -15,7 +15,7 @@ const ComponentLayout = ({}: Props) => {
   const isDark = mode === "dark";
 
   const components = [
-    "Button",
+    "Buttons",
     "Card",
     "Modal",
     "Input",

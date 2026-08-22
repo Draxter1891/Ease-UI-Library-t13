@@ -1,7 +1,7 @@
 import { toggleTheme } from "@/features/ThemeSlice";
 import { Moon, Search, Sun } from "lucide-react";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router";
+import { NavLink, useNavigate } from "react-router";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -33,14 +33,24 @@ const Navbar = () => {
       </div>
 
       <ul className="hidden md:flex items-center gap-6 text-gray-500">
-        <li
-          onClick={() => navigate("components/buttons")}
+        <NavLink
+          to={"components/buttons"}
           className={`cursor-pointer ${mode==="dark"?"text-gray-200 hover:text-gray-400":"text-gray-900 hover:text-gray-500"}`}
         >
           Components
-        </li>
-        <li className={`cursor-pointer ${mode==="dark"?"text-gray-200 hover:text-gray-400":"text-gray-900 hover:text-gray-500"}`}>About</li>
-        <li className={`cursor-pointer ${mode==="dark"?"text-gray-200 hover:text-gray-400":"text-gray-900 hover:text-gray-500"}`}>Templates</li>
+        </NavLink>
+        <NavLink
+          to={"about"}
+          className={`cursor-pointer ${mode==="dark"?"text-gray-200 hover:text-gray-400":"text-gray-900 hover:text-gray-500"}`}
+        >
+          About
+        </NavLink>
+        <NavLink
+          to={"templates"}
+          className={`cursor-pointer ${mode==="dark"?"text-gray-200 hover:text-gray-400":"text-gray-900 hover:text-gray-500"}`}
+        >
+          Templates
+        </NavLink>
         {mode === "dark" && (
           <li
             className="cursor-pointer p-2 rounded-full transition duration-100 ease-in hover:bg-gray-600"
