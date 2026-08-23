@@ -1,7 +1,8 @@
 import { createBrowserRouter, RouterProvider } from "react-router";
+import { lazy, Suspense } from "react";
 import HomeLayout from "../layouts/HomeLayout";
 import ComponentLayout from "../layouts/ComponentLayout";
-import HomePage from "../pages/HomePage";
+
 import ButtonPage from "../pages/components/ButtonPage";
 import CardPage from "@/pages/components/CardPage";
 import ModalPage from "@/pages/components/ModalPage";
@@ -10,8 +11,12 @@ import NavbarPage from "@/pages/components/NavbarPage";
 import ToolTip from "@/pages/components/ToolTipPage";
 import LayoutPage from "@/pages/components/LayoutPage";
 import CarouselPage from "@/pages/components/CarouselPage";
-import Templates from "@/pages/Templates";
-import AboutPage from "@/pages/AboutPage";
+import AboutSkeleton from "@/components/Loading/AboutSkeleton";
+import TemplateSkeleton from "@/components/Loading/TemplateSkeleton";
+import HomeSkeleton from "@/components/Loading/HomeSkeleton";
+const HomePage = lazy(() => import("../pages/HomePage"));
+const AboutPage = lazy(() => import("@/pages/AboutPage"));
+const TemplatePage = lazy(() => import("@/pages/Templates"));
 
 type Props = {};
 
@@ -23,7 +28,11 @@ const AppRouter = ({}: Props) => {
       children: [
         {
           index: true,
-          element: <HomePage />,
+          element: (
+            <Suspense fallback={<HomeSkeleton />}>
+              <HomePage />
+            </Suspense>
+          ),
         },
         {
           path: "components",
@@ -64,13 +73,21 @@ const AppRouter = ({}: Props) => {
           ],
         },
         {
-          path:"templates",
-          element:<Templates/>
+          path: "templates",
+          element: (
+            <Suspense fallback={<TemplateSkeleton />}>
+              <TemplatePage />
+            </Suspense>
+          ),
         },
         {
-          path:"about",
-          element:<AboutPage/>
-        }
+          path: "about",
+          element: (
+            <Suspense fallback={<AboutSkeleton />}>
+              <AboutPage />
+            </Suspense>
+          ),
+        },
       ],
     },
   ]);
