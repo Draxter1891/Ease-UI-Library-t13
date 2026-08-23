@@ -61,8 +61,8 @@ const ComingSoon = ({ componentName = "Component" }: ComingSoonProps) => {
             <div className="absolute top-1/2 left-0 w-full ml-10 mb-10">
               <img
                 className=" w-30 h-full "
-                src="../src/assets/buildMode.svg"
-                alt=""
+                src="/src/assets/buildMode.svg"
+                alt="Developing code image"
               />
             </div>
           </div>
