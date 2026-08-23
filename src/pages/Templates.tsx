@@ -13,7 +13,7 @@ const Templates = () => {
       className="mx-auto max-w-[1440px] px-5 py-[120px] md:px-20 rounded-3xl"
       style={{
         background:
-          "url('../src/assets/componentShowcase.jpg') center no-repeat",
+          "url('https://ik.imagekit.io/udeluwj7a/COHORT-3.0/EaseUI%20assets/componentShowcase.jpg') center no-repeat",
       }}
     >
       <div className="mb-10">

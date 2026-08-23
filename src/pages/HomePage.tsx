@@ -48,7 +48,7 @@ const HomePage = ({}: Props) => {
               <div
                 className="h-full w-full rounded-lg bg-cover bg-center"
                 style={{
-                  backgroundImage: "url('../src/assets/heroCard.jpg')",
+                  backgroundImage: "url('https://ik.imagekit.io/udeluwj7a/COHORT-3.0/EaseUI%20assets/heroCard.jpg')",
                 }}
               />
 
