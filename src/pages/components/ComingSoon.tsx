@@ -1,4 +1,5 @@
 import { ArrowLeft, Clock3, Code2, Sparkles } from "lucide-react";
+import buildModeImage from "@/assets/buildMode.svg";
 
 interface ComingSoonProps {
   componentName?: string;
@@ -61,7 +62,7 @@ const ComingSoon = ({ componentName = "Component" }: ComingSoonProps) => {
             <div className="absolute top-1/2 left-0 w-full ml-10 mb-10">
               <img
                 className=" w-30 h-full "
-                src="/src/assets/buildMode.svg"
+                src={buildModeImage}
                 alt="Developing code image"
               />
             </div>
