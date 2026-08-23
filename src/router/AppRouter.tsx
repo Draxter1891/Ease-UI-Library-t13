@@ -2,7 +2,6 @@ import { createBrowserRouter, RouterProvider } from "react-router";
 import { lazy, Suspense } from "react";
 import HomeLayout from "../layouts/HomeLayout";
 import ComponentLayout from "../layouts/ComponentLayout";
-
 import ButtonPage from "../pages/components/ButtonPage";
 import CardPage from "@/pages/components/CardPage";
 import ModalPage from "@/pages/components/ModalPage";
@@ -18,9 +17,8 @@ const HomePage = lazy(() => import("../pages/HomePage"));
 const AboutPage = lazy(() => import("@/pages/AboutPage"));
 const TemplatePage = lazy(() => import("@/pages/Templates"));
 
-type Props = {};
 
-const AppRouter = ({}: Props) => {
+const AppRouter = () => {
   const router = createBrowserRouter([
     {
       path: "/",

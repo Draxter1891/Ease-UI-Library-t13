@@ -2,9 +2,7 @@ import { NavLink } from "react-router";
 import { useSelector } from "react-redux";
 import type { RootState } from "@/store/Store";
 
-type Props = {};
-
-const HomePage = ({}: Props) => {
+const HomePage = () => {
   const { mode } = useSelector((state: RootState) => state.theme);
   const isDark = mode === "dark";
   const mutedText = isDark ? "text-[#c7c4d7]" : "text-gray-600";
@@ -13,12 +11,12 @@ const HomePage = ({}: Props) => {
 
   return (
     <div
-      className={`min-h-dvh pt-16 ${
+      className={`min-h-dvh ${
         isDark ? " text-[#e4e1e5]" : "text-gray-900"
       }`}
     >
       <main>
-        <section className="mx-auto w-full px-5 pb-20 pt-[120px] md:px-20 rounded-2xl">
+        <section className="mx-auto w-full h-full px-5 pt-7 md:px-20 rounded-2xl">
           <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-2">
             <div className="flex flex-col gap-10">
               <h1 className="text-[32px] font-bold leading-tight tracking-[-0.02em] md:text-[72px] md:leading-[1.1] md:tracking-[-0.04em]">
@@ -43,7 +41,7 @@ const HomePage = ({}: Props) => {
             </div>
 
             <div
-              className={`relative hidden aspect-square w-full overflow-hidden rounded-lg border p-2 md:block lg:aspect-square ${border} ${surface}`}
+              className={`relative aspect-square w-full overflow-hidden rounded-lg border p-2 md:block lg:aspect-square ${border} ${surface}`}
             >
               <div
                 className="h-full w-full rounded-lg bg-cover bg-center"
@@ -53,7 +51,7 @@ const HomePage = ({}: Props) => {
               />
 
               <div
-                className={`absolute bottom-6 left-6 right-6 rounded-lg border p-4 shadow-2xl backdrop-blur-xl lg:left-auto lg:w-2/3 ${
+                className={`absolute w-2/3 bottom-6 left-6 right-6 rounded-lg border p-4 shadow-2xl backdrop-blur-xl lg:left-auto lg:w-2/3 ${
                   isDark
                     ? "border-[#27272a]/80 bg-[rgba(9,9,11,0.7)]"
                     : "border-white/80 bg-white/85"
@@ -65,7 +63,7 @@ const HomePage = ({}: Props) => {
                   <div className="h-3 w-3 rounded-full bg-[#25C342]" />
                 </div>
                 <pre
-                  className={`overflow-x-auto font-mono text-sm leading-normal ${mutedText}`}
+                  className={`overflow-x-auto font-mono text-xs md:text-sm leading-normal ${mutedText}`}
                 >
                   <span className="text-[#c0c1ff]">import</span> {"{ Button }"}
                   <span className="text-[#c0c1ff]">from</span>

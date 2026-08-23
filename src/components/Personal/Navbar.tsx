@@ -22,7 +22,7 @@ const Navbar = () => {
         </h1>
 
 
-        <div className="hidden sm:flex items-center bg-transparent rounded-md px-3 py-1.5 shadow-xs shadow-gray-300 border border-gray-200">
+        <div className="hidden sm:flex items-center bg-transparent rounded-2xl px-3 py-1.5 border border-gray-500">
           <Search size={18} className="text-gray-500" />
           <input
             type="text"
