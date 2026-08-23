@@ -20,8 +20,8 @@ const ComponentLayout = ({}: Props) => {
     "Modal",
     "Input",
     "Navbar",
-    "Carousel",
     "Tooltip",
+    "Carousel",
     "Layout",
   ];
 

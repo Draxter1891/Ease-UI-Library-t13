@@ -13,10 +13,10 @@ import CarouselPage from "@/pages/components/CarouselPage";
 import AboutSkeleton from "@/components/Loading/AboutSkeleton";
 import TemplateSkeleton from "@/components/Loading/TemplateSkeleton";
 import HomeSkeleton from "@/components/Loading/HomeSkeleton";
+import ComingSoon from "@/pages/components/ComingSoon";
 const HomePage = lazy(() => import("../pages/HomePage"));
 const AboutPage = lazy(() => import("@/pages/AboutPage"));
 const TemplatePage = lazy(() => import("@/pages/Templates"));
-
 
 const AppRouter = () => {
   const router = createBrowserRouter([
@@ -62,11 +62,11 @@ const AppRouter = () => {
             },
             {
               path: "layout",
-              element: <LayoutPage />,
+              element: <ComingSoon/>,
             },
             {
               path: "carousel",
-              element: <CarouselPage />,
+              element: <ComingSoon />,
             },
           ],
         },
