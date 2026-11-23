@@ -1,27 +1,58 @@
 {
   "name": "@draxter/easeui",
   "version": "0.1.0",
-  "description": "A modern React UI library by Devendra Dhote and team",
+  "description": "A modern React UI component library",
   "author": "Rishabh Tripathi",
+  "contributors": [
+    {
+      "name": "Devendra Dhote"
+    }
+  ],
   "license": "MIT",
-  "main": "dist/easeui.umd.js",
-  "module": "dist/easeui.es.js",
-  "types": "dist/types/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Draxter1891/Task13-Cohort-3.0.git"
+  },
+  "homepage": "https://github.com/Draxter1891/Task13-Cohort-3.0#readme",
+  "bugs": {
+    "url": "https://github.com/Draxter1891/Task13-Cohort-3.0/issues"
+  },
+  "keywords": [
+    "react",
+    "ui",
+    "ui-library",
+    "components",
+    "react-components",
+    "tailwindcss",
+    "typescript"
+  ],
+  "main": "./dist-lib/index.cjs",
+  "module": "./dist-lib/index.js",
+  "types": "./dist-lib/index.d.ts",
   "files": [
-    "dist"
+    "dist-lib"
+  ],
+  "sideEffects": [
+    "**/*.css"
   ],
   "type": "module",
   "exports": {
     ".": {
-      "import": "./dist/easeui.es.js",
-      "require": "./dist/easeui.umd.js"
+      "types": "./dist-lib/index.d.ts",
+      "import": "./dist-lib/index.js",
+      "require": "./dist-lib/index.cjs"
     },
-    "./style.css": "./dist/index.css"
+    "./style.css": "./dist-lib/style.css"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "build:lib": "vite build -c vite.lib.config.ts && tsc -p tsconfig.lib.json",
+    "typecheck": "tsc -p tsconfig.app.json",
+    "prepack": "npm run build:lib",
     "preview": "vite preview"
   },
   "peerDependencies": {
@@ -30,19 +61,19 @@
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.3",
-    "@reduxjs/toolkit": "^2.9.2",
-    "@tailwindcss/vite": "^4.1.16",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "gsap": "^3.13.0",
     "lucide-react": "^0.544.0",
-    "react-redux": "^9.2.0",
-    "react-router": "^7.9.5",
-    "tailwind-merge": "^3.3.1",
-    "tailwindcss": "^4.1.16"
+    "tailwind-merge": "^3.3.1"
   },
   "devDependencies": {
     "@types/node": "^26.2.0",
+    "@reduxjs/toolkit": "^2.9.2",
+    "react-redux": "^9.2.0",
+    "react-router": "^7.9.5",
+    "@tailwindcss/vite": "^4.1.16",
+    "tailwindcss": "^4.1.16",
     "@types/react": "^19.1.13",
     "@types/react-dom": "^19.1.9",
     "@vitejs/plugin-react": "^5.0.3",
