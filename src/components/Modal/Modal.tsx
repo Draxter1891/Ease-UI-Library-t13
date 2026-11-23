@@ -1,7 +1,7 @@
 import { Slot } from "@radix-ui/react-slot";
 import { cva, type VariantProps } from "class-variance-authority";
 import React from "react";
-import { cn } from "@/libs/utils";
+import { cn } from "../../libs/utils";
 
 const modalVariants = cva(
   "fixed inset-0 flex items-center justify-center z-50 transition-all duration-300",

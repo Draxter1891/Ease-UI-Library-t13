@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { cn } from "@/libs/utils";
+import { cn } from "../../libs/utils";
 import { cva } from "class-variance-authority";
 
 const wrapper = cva("relative w-full");

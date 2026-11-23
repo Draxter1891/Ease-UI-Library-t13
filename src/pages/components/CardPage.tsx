@@ -1,6 +1,6 @@
 import { Card } from "@/components/Card/Card";
 import ComponentDemo from "../ComponentsDemo";
-import PropsTable from "@/components/Personal/PropsTable";
+import PropsTable from "@/demo/Personal/PropsTable";
 import { Button } from "@/components";
 
 const CardPage = () => {

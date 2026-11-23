@@ -1,6 +1,6 @@
 import React from "react";
 import { cva } from "class-variance-authority";
-import { cn } from "@/libs/utils";
+import { cn } from "../../libs/utils";
 
 const textareaCls = cva(
   "w-full rounded-md border px-3 py-2 resize-y focus:outline-none transition",

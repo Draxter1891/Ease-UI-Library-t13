@@ -1,5 +1,5 @@
 import ComponentDemo from "../ComponentsDemo";
-import PropsTable from "@/components/Personal/PropsTable";
+import PropsTable from "@/demo/Personal/PropsTable";
 import { Button } from "@/components/Button/Button";
 import { Tooltip } from "@/components/Tooltip/Tooltip";
 

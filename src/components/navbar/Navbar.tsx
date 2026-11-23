@@ -2,9 +2,9 @@
 import { Slot } from "@radix-ui/react-slot";
 import React, { forwardRef, useEffect, useRef } from "react";
 import { cva, type VariantProps } from "class-variance-authority";
-import { cn } from "@/libs/utils";
-import { entranceAnimations } from "@/libs/animations/entranceAnimation";
-import { hoverAnimations } from "@/libs/animations/hoverAnimation";
+import { cn } from "../../libs/utils";
+import { entranceAnimations } from "../../libs/animations/entranceAnimation";
+import { hoverAnimations } from "../../libs/animations/hoverAnimation";
 import gsap from "gsap";
 import { Button } from "../Button";
 

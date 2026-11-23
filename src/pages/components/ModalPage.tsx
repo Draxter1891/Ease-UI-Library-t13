@@ -1,6 +1,6 @@
 import { useState } from "react";
 import ComponentDemo from "../ComponentsDemo";
-import PropsTable from "@/components/Personal/PropsTable";
+import PropsTable from "@/demo/Personal/PropsTable";
 import { Button } from "@/components/Button/Button";
 import { Modal } from "@/components/Modal/Modal";
 

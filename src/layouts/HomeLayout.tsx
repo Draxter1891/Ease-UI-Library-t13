@@ -1,5 +1,5 @@
 import { Outlet } from "react-router";
-import Navbar from "../components/Personal/Navbar";
+import Navbar from "../demo/Personal/Navbar";
 import Footer from "@/pages/components/Footer";
 
 type Props = {};

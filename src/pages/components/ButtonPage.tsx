@@ -1,7 +1,7 @@
 // import CodeBlock from "@/components/Personal/CodeBlock";
 import { Button } from "@/components/Button/Button";
 import ComponentDemo from "../ComponentsDemo";
-import PropsTable from "@/components/Personal/PropsTable";
+import PropsTable from "@/demo/Personal/PropsTable";
 
 const ButtonPage = () => {
   const basicUsageCode = `

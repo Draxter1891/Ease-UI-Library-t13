@@ -1,5 +1,5 @@
 import ComponentDemo from "@/pages/ComponentsDemo"; // your reusable ComponentDemo
-import PropsTable from "@/components/Personal/PropsTable";
+import PropsTable from "@/demo/Personal/PropsTable";
 import { Input } from "@/components";
 import { PasswordInput } from "@/components/Input/PasswordInput";
 import {

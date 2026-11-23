@@ -8,11 +8,13 @@ import ModalPage from "@/pages/components/ModalPage";
 import InputPage from "@/pages/components/InputPage";
 import NavbarPage from "@/pages/components/NavbarPage";
 import ToolTip from "@/pages/components/ToolTipPage";
-import LayoutPage from "@/pages/components/LayoutPage";
-import CarouselPage from "@/pages/components/CarouselPage";
-import AboutSkeleton from "@/components/Loading/AboutSkeleton";
-import TemplateSkeleton from "@/components/Loading/TemplateSkeleton";
-import HomeSkeleton from "@/components/Loading/HomeSkeleton";
+
+//----------------------------UPCOMING COMPONENTS----------------------------------
+// import LayoutPage from "@/pages/components/LayoutPage";
+// import CarouselPage from "@/pages/components/CarouselPage";
+import AboutSkeleton from "@/demo/Loading/AboutSkeleton";
+import TemplateSkeleton from "@/demo/Loading/TemplateSkeleton";
+import HomeSkeleton from "@/demo/Loading/HomeSkeleton";
 import ComingSoon from "@/pages/components/ComingSoon";
 const HomePage = lazy(() => import("../pages/HomePage"));
 const AboutPage = lazy(() => import("@/pages/AboutPage"));

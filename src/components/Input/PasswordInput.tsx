@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Input, type InputProps } from "./Input";
-import { cn } from "@/libs/utils";
+import { cn } from "../../libs/utils";
 import { Eye, EyeOff } from "lucide-react"; // or any icon lib
 
 type Props = Omit<InputProps, "type">;

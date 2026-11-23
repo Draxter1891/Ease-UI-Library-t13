@@ -3,8 +3,21 @@ import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import path from "path";
 
+const external = [
+  "react",
+  "react-dom",
+  "react/jsx-runtime",
+  "gsap",
+  "lucide-react",
+  "clsx",
+  "tailwind-merge",
+  "class-variance-authority",
+  "@radix-ui/react-slot",
+];
+
 export default defineConfig({
   plugins: [react(), tailwindcss()],
+  publicDir: false,
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
@@ -12,20 +25,16 @@ export default defineConfig({
   },
   build: {
     outDir: "dist-lib",
+    cssCodeSplit: false,
     lib: {
       entry: path.resolve(__dirname, "src/index.ts"),
-      name: "EaseUI",
-      fileName: (format) => `easeui.${format}.js`,
+      formats: ["es", "cjs"],
+      fileName: (format) => (format === "es" ? "index.js" : "index.cjs"),
+      cssFileName: "style",
     },
-    cssCodeSplit: true,
     rollupOptions: {
-      external: ["react", "react-dom"],
-      output: {
-        globals: {
-          react: "React",
-          "react-dom": "ReactDOM",
-        },
-      },
+      external: (id) =>
+        external.some((dep) => id === dep || id.startsWith(dep + "/")),
     },
   },
 });
