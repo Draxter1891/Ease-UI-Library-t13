@@ -4,7 +4,7 @@ EaseUI is a React UI component library built with TypeScript. It provides reusab
  
 [Live demo](https://task13-cohort-3-0.vercel.app/) · [npm](https://www.npmjs.com/package/@draxter/easeui) · [Issues](https://github.com/Draxter1891/Task13-Cohort-3.0/issues)
  
-> **Status:** early release (0.x). The API may change before 1.0.
+> **Status:** early release (0.1.0). The API may change before 1.0.
  
 The repository also contains a Vite-based demonstration website used to showcase the library.
  
