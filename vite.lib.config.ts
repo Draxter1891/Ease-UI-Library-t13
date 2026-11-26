@@ -28,8 +28,14 @@ export default defineConfig({
     cssCodeSplit: false,
     lib: {
       entry: path.resolve(__dirname, "src/index.ts"),
-      formats: ["es", "cjs"],
-      fileName: (format) => (format === "es" ? "index.js" : "index.cjs"),
+      /**
+       * If the user need CJS (require/older method) in their code use both formats
+       */
+      // formats: ["es", "cjs"],
+      // fileName: (format) => (format === "es" ? "index.js" : "index.cjs"),
+      // cssFileName: "style",
+      formats:["es"],
+      fileName: ()=>"index.js",
       cssFileName: "style",
     },
     rollupOptions: {
