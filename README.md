@@ -7,9 +7,8 @@
     width="800"
   />
 </a>
-
-
 <sub>Click the image to open the live demo.</sub>
+<br><br><br>
 EaseUI is a React UI component library built with TypeScript. It provides reusable interface components with configurable styles, component variants, and selected GSAP-powered interactions.
 
 [npm](https://www.npmjs.com/package/@draxter/easeui) · [Issues](https://github.com/Draxter1891/Task13-Cohort-3.0/issues)
