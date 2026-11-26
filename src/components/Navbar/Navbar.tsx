@@ -32,7 +32,7 @@ const navbarVariants = cva(
   }
 );
 
-interface NavbarProps
+export interface NavbarProps
   extends React.HTMLAttributes<HTMLElement>,
     VariantProps<typeof navbarVariants> {
   asChild?: boolean;

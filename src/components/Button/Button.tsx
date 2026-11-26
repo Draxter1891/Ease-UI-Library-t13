@@ -7,7 +7,7 @@ import gsap from "gsap";
 import { entranceAnimations } from "../../libs/animations/entranceAnimation";
 import { hoverAnimations } from "../../libs/animations/hoverAnimation";
 
-interface ButtonProps
+export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {
   asChild?: boolean;

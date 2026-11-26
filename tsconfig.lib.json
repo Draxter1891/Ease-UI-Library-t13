@@ -7,6 +7,6 @@
       "noEmit": false, //this prevents typescript generating js files during type checking
       "stripInternal": true,
     },
-    "include": ["src/index.ts", "src/components", "src/libs"]
+    "include": ["src/index.ts"]
   }
   

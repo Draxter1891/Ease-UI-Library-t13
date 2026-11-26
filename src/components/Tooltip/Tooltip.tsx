@@ -1,7 +1,7 @@
 import React from "react";
 import { cn } from "../../libs/utils";
 
-type TooltipProps = {
+export type TooltipProps = {
   content: React.ReactNode;
   children: React.ReactNode;
   position?: "top" | "right" | "bottom" | "left";
