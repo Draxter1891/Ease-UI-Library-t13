@@ -1,6 +1,6 @@
 # EaseUI
  
- <a href="https://YOUR-APP.vercel.app">
+ <a href="https://task13-cohort-3-0.vercel.app/" target="_blank">
   <img
     src="https://raw.githubusercontent.com/Draxter1891/Task13-Cohort-3.0/main/docs/demo.png"
     alt="EaseUI demo site landing page"
