@@ -1,8 +1,18 @@
 # EaseUI
  
+ <a href="https://YOUR-APP.vercel.app">
+  <img
+    src="https://raw.githubusercontent.com/Draxter1891/Task13-Cohort-3.0/main/docs/demo.png"
+    alt="EaseUI demo site landing page"
+    width="800"
+  />
+</a>
+
+
+<sub>Click the image to open the live demo.</sub>
 EaseUI is a React UI component library built with TypeScript. It provides reusable interface components with configurable styles, component variants, and selected GSAP-powered interactions.
- 
-[Live demo](https://task13-cohort-3-0.vercel.app/) · [npm](https://www.npmjs.com/package/@draxter/easeui) · [Issues](https://github.com/Draxter1891/Task13-Cohort-3.0/issues)
+
+[npm](https://www.npmjs.com/package/@draxter/easeui) · [Issues](https://github.com/Draxter1891/Task13-Cohort-3.0/issues)
  
 > **Status:** early release (0.1.0). The API may change before 1.0.
  
